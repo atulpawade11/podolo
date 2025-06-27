@@ -2,7 +2,8 @@
 
 import { useState } from "react";
 import { Info } from "lucide-react";
-import { CheckIcon, UserIcon, XIcon } from "lucide-react";
+import { CheckIcon, UserIcon } from "lucide-react";
+import Image from 'next/image';
 
 const order = {
   id: "#96459761",
@@ -172,10 +173,12 @@ export default function TrackOrder() {
                     >
                       {isCompleted && <CheckIcon className="w-3 h-3 text-white" />}
                     </div>
-                    <img
+                    <Image
                       src={step.icon}
                       alt={step.label}
-                      className="w-6 h-6 mt-4 mb-1"
+                      width={24}  // Tailwind w-6 = 24px
+                      height={24} // Tailwind h-6 = 24px
+                      className="mt-4 mb-1"
                     />
                     <p className="text-xs text-gray-700 w-24">{step.label}</p>
                   </div>

@@ -1,0 +1,15 @@
+{
+  "/(public)/cart/page": "app/(public)/cart/page.js",
+  "/(public)/checkout/page": "app/(public)/checkout/page.js",
+  "/(public)/dashboard/address/page": "app/(public)/dashboard/address/page.js",
+  "/(public)/dashboard/orders/[id]/page": "app/(public)/dashboard/orders/[id]/page.js",
+  "/(public)/dashboard/orders/page": "app/(public)/dashboard/orders/page.js",
+  "/(public)/dashboard/page": "app/(public)/dashboard/page.js",
+  "/(public)/dashboard/settings/page": "app/(public)/dashboard/settings/page.js",
+  "/(public)/dashboard/wishlist/page": "app/(public)/dashboard/wishlist/page.js",
+  "/(public)/invoice/page": "app/(public)/invoice/page.js",
+  "/(public)/page": "app/(public)/page.js",
+  "/(public)/shop/page": "app/(public)/shop/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js"
+}

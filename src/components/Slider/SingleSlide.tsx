@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import { Product } from '@/types/products';
 import WishlistButton from '@/components/WishlistButton';
 
@@ -27,11 +28,14 @@ const SingleSlide: React.FC<SingleSlideProps> = ({ product }) => {
       )}
 
       {/* Product Image */}
-      <img
-        src={product.image}
-        alt={product.name}
-        className="mx-auto w-full h-full mb-4 bg-gray-200"
-      />
+      <div className="relative w-full h-full mx-auto mb-4 bg-gray-200">
+        <Image
+          src={product.image}
+          alt={product.name}
+          fill
+          className="object-contain"
+        />
+      </div>
 
       {/* Product Name */}
       <h3 className="text-md font-normal text-black">{product.name}</h3>

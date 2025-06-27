@@ -3,9 +3,10 @@
 import React, { useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay } from 'swiper/modules';
-import type { Swiper as SwiperType } from 'swiper/types';
+import { Swiper as SwiperType } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/navigation';
+import Image from 'next/image';
 
 interface Product {
   id: string | number;
@@ -83,7 +84,7 @@ export default function CenterTabbedSlider({
 
           <Swiper
             modules={[Navigation, Autoplay]}
-            onSwiper={(swiper: any) => {
+            onSwiper={(swiper: SwiperType) => {
               swiperRef.current = swiper;
             }}
             navigation={false}
@@ -100,11 +101,14 @@ export default function CenterTabbedSlider({
             {products.map((p) => (
               <SwiperSlide key={p.id}>
                 <div className="p-2 border border-gray-300 bg-white">
-                  <img
-                    src={p.image}
-                    alt={p.name}
-                    className="w-full h-40 object-contain"
-                  />
+                  <div className="relative w-full h-40">
+                    <Image
+                      src={p.image}
+                      alt={p.name}
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
                   <h3 className="text-sm font-semibold mt-2">{p.name}</h3>
                   <p className="text-sm font-bold">${p.price.toFixed(2)}</p>
                 </div>

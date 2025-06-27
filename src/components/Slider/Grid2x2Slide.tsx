@@ -1,6 +1,7 @@
 import React from 'react';
 import { Product } from '@/types/products';
 import WishlistButton from '@/components/WishlistButton';
+import Image from 'next/image';
 
 interface Grid2x2SlideProps {
   products: Product[];
@@ -33,11 +34,14 @@ const Grid2x2Slide: React.FC<Grid2x2SlideProps> = ({ products }) => {
             )}
 
             {/* Product Image */}
-            <img
-              src={product.image}
-              className="mx-auto w-100 h-100 mb-2 bg-gray-200"
-              alt={product.name}
-            />
+            <div className="relative w-[100px] h-[100px] mx-auto mb-2 bg-gray-200">
+              <Image
+                src={product.image}
+                alt={product.name}
+                fill
+                className="object-contain"
+              />
+            </div>
 
             {/* Product Info */}
             <div className="text-md font-normal text-black">{product.name}</div>

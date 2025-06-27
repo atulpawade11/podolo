@@ -1,45 +1,8 @@
 "use client";
 
 import React from "react";
-import Link from "next/link";
-import Image from "next/image";
-import { RocketIcon, FileTextIcon, PackageIcon, ArrowRight } from 'lucide-react';
-import CardItem from '@/components/Dashboard/CardItem';
 import PaymentCards from '@/components/Dashboard/PaymentCards';
 import BillingAddress from '@/components/Dashboard/BillingAddress';
-
-const orders = [
-  {
-    id: '#71667167',
-    status: 'COMPLETED',
-    date: 'June 2, 2025 19:28',
-    total: '$80 (11 Products)',
-  },
-  {
-    id: '#95214362',
-    status: 'CANCELED',
-    date: 'Mar 20, 2025 23:14',
-    total: '$160 (3 Products)',
-  },
-  {
-    id: '#71667167',
-    status: 'COMPLETED',
-    date: 'Feb 2, 2025 19:28',
-    total: '$80 (11 Products)',
-  },
-  {
-    id: '#71667167',
-    status: 'COMPLETED',
-    date: 'Jan 15, 2015 19:28',
-    total: '$80 (11 Products)',
-  },
-  {
-    id: '#95214362',
-    status: 'CANCELED',
-    date: 'Dec 20, 2014 23:14',
-    total: '$160 (3 Products)',
-  },
-];
 
 export default function Address() {
   return (

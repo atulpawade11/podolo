@@ -3,7 +3,6 @@ import {
   SquaresPlusIcon, // for social icon (generic grid)
   CursorArrowRaysIcon,
   ChartPieIcon,
-  ArrowPathIcon,
   FingerPrintIcon,
 } from "@heroicons/react/24/outline";
 
@@ -33,7 +32,7 @@ export default function Topbar() {
                     <Link href="#">About</Link>
                     <Link href="#">Blog</Link>
                     <Link href="#">Contact</Link>
-                    <Link href="#">FAQ's</Link>
+                    <Link href="#">FAQs</Link>
                 </div>
             </div>
         </div>

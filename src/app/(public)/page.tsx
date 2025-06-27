@@ -2,10 +2,11 @@
 
 import React, { useState } from 'react';
 import ProductSlider from '@/components/Slider/ProductSlider';
-import WishlistButton from '@/components/WishlistButton';
+//import WishlistButton from '@/components/WishlistButton';
 import HeroSlider from "@/components/HeroSlider";
 import ImageSlider from "@/components/Slider/ImageSlider";
 import NewArrival from '@/components/NewArrival';
+import Image from 'next/image';
 
 export default function Home() {
   const [firstTab, setFirstTab] = useState("Latest's Products");
@@ -81,7 +82,14 @@ export default function Home() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {products.slice(0, 8).map((p) => (
               <div key={p.id} className="bg-white p-4 rounded shadow">
-                <img src={p.image} alt={p.name} className="w-full h-40 object-contain mb-2" />
+                <div className="relative w-full h-40 mb-2">
+                  <Image
+                    src={p.image}
+                    alt={p.name}
+                    fill  
+                    className="object-contain"
+                  />
+                </div>
                 <h3 className="text-sm font-semibold">{p.name}</h3>
                 <p className="text-sm font-bold">${p.price.toFixed(2)}</p>
               </div>

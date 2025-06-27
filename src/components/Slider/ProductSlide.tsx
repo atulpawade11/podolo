@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import { Product } from '@/types/products';
 import WishlistButton from '@/components/WishlistButton';
 
@@ -29,11 +30,14 @@ const ProductSlide: React.FC<Props> = ({ product }) => {
         <WishlistButton product_id={product.id} liked={false} />
       </div>
 
-      <img
-        src={product.image}
-        alt={product.name}
-        className="w-full h-60 bg-gray-200 mb-3"
-      />
+      <div className="relative w-full h-60 bg-gray-200 mb-3">
+        <Image
+          src={product.image}
+          alt={product.name}
+          fill
+          className="object-contain"
+        />
+      </div>
 
       
 

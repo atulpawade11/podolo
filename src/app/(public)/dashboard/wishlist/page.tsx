@@ -1,6 +1,7 @@
 "use client";
 
 import { ShoppingCart, X } from "lucide-react";
+import Image from 'next/image';
 
 const wishlistItems = [
   {
@@ -51,11 +52,14 @@ export default function Wishlist() {
           >
             {/* Product Info */}
             <div className="col-span-6 flex gap-4 items-center">
-              <img
-                src={item.image}
-                alt={item.name}
-                className="w-14 h-14 object-contain"
-              />
+              <div className="relative w-14 h-14">
+                <Image
+                  src={item.image}
+                  alt={item.name}
+                  fill
+                  className="object-contain"
+                />
+              </div>
               <p className="text-gray-800 ">{item.name}</p>
             </div>
 

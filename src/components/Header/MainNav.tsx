@@ -267,7 +267,7 @@ export default function MainNav() {
                       <a href="#">About</a>
                       <a href="#">Blog</a>
                       <a href="#">Contact</a>
-                      <a href="#">FAQ's</a>
+                      <a href="#">FAQs</a>
                     </div>
                   </div>
                 </div>

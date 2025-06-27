@@ -1,0 +1,94 @@
+{
+  "node": {
+    "60a49f1dfab34f0a9ab9592bf0a4492bdfaa941e5d": {
+      "workers": {
+        "app/(public)/cart/page": {
+          "moduleId": "[project]/.next-internal/server/app/(public)/cart/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/lib/api/services/wishlist.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false
+        },
+        "app/(public)/checkout/page": {
+          "moduleId": "[project]/.next-internal/server/app/(public)/checkout/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/lib/api/services/wishlist.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false
+        },
+        "app/(public)/dashboard/address/page": {
+          "moduleId": "[project]/.next-internal/server/app/(public)/dashboard/address/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/lib/api/services/wishlist.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false
+        },
+        "app/(public)/dashboard/orders/[id]/page": {
+          "moduleId": "[project]/.next-internal/server/app/(public)/dashboard/orders/[id]/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/lib/api/services/wishlist.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false
+        },
+        "app/(public)/dashboard/orders/page": {
+          "moduleId": "[project]/.next-internal/server/app/(public)/dashboard/orders/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/lib/api/services/wishlist.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false
+        },
+        "app/(public)/dashboard/page": {
+          "moduleId": "[project]/.next-internal/server/app/(public)/dashboard/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/lib/api/services/wishlist.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false
+        },
+        "app/(public)/dashboard/settings/page": {
+          "moduleId": "[project]/.next-internal/server/app/(public)/dashboard/settings/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/lib/api/services/wishlist.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false
+        },
+        "app/(public)/dashboard/wishlist/page": {
+          "moduleId": "[project]/.next-internal/server/app/(public)/dashboard/wishlist/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/lib/api/services/wishlist.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false
+        },
+        "app/(public)/invoice/page": {
+          "moduleId": "[project]/.next-internal/server/app/(public)/invoice/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/lib/api/services/wishlist.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false
+        },
+        "app/(public)/page": {
+          "moduleId": "[project]/.next-internal/server/app/(public)/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/lib/api/services/wishlist.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false
+        },
+        "app/(public)/shop/page": {
+          "moduleId": "[project]/.next-internal/server/app/(public)/shop/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/lib/api/services/wishlist.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false
+        },
+        "app/_not-found/page": {
+          "moduleId": "[project]/.next-internal/server/app/_not-found/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/lib/api/services/wishlist.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/(public)/cart/page": "action-browser",
+        "app/(public)/checkout/page": "action-browser",
+        "app/(public)/dashboard/address/page": "action-browser",
+        "app/(public)/dashboard/orders/[id]/page": "action-browser",
+        "app/(public)/dashboard/orders/page": "action-browser",
+        "app/(public)/dashboard/page": "action-browser",
+        "app/(public)/dashboard/settings/page": "action-browser",
+        "app/(public)/dashboard/wishlist/page": "action-browser",
+        "app/(public)/invoice/page": "action-browser",
+        "app/(public)/page": "action-browser",
+        "app/(public)/shop/page": "action-browser",
+        "app/_not-found/page": "action-browser"
+      }
+    },
+    "6069d482459e3632274e02fce1f954eb99651d4c6a": {
+      "workers": {
+        "app/(public)/page": {
+          "moduleId": "[project]/.next-internal/server/app/(public)/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/lib/api/services/wishlist.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/(public)/page": "action-browser"
+      }
+    },
+    "60d05eb45d16a11008cd934259e2b3cb58d65d0be4": {
+      "workers": {
+        "app/(public)/page": {
+          "moduleId": "[project]/.next-internal/server/app/(public)/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/lib/api/services/wishlist.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/(public)/page": "action-browser"
+      }
+    }
+  },
+  "edge": {},
+  "encryptionKey": "tOJb7vYYLL2iTyI1qHwkclEU2YGq//U2J63Oe/J+rQs="
+}

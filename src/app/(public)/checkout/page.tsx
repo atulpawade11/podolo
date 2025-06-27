@@ -156,7 +156,13 @@ export default function CheckoutPage() {
             <div className="bg-white p-6 border border-gray-300">
               <h3 className="font-semibold text-lg mb-4">Order Summary</h3>
               <div className="flex items-start space-x-4 mb-4 border-b pb-4">
-                <img src="/images/dress-red.png" alt="product" className="w-16 h-20 object-cover rounded" />
+                <Image
+                  src="/images/dress-red.png"
+                  alt="product"
+                  width={64} // w-16 = 64px
+                  height={80} // h-20 = 80px
+                  className="object-cover rounded"
+                />
                 <div className="flex-1">
                   <p className="font-medium">Midi dress with 2 straps</p>
                   <p className="text-sm text-gray-500">$265</p>

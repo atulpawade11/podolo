@@ -1,0 +1,16 @@
+{
+  "node": {
+    "60a49f1dfab34f0a9ab9592bf0a4492bdfaa941e5d": {
+      "workers": {
+        "app/(public)/invoice/page": {
+          "moduleId": "[project]/.next-internal/server/app/(public)/invoice/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/lib/api/services/wishlist.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/(public)/invoice/page": "action-browser"
+      }
+    }
+  },
+  "edge": {}
+}

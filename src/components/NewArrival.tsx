@@ -1,6 +1,7 @@
 'use client';
 
 import { HeartIcon } from '@heroicons/react/24/outline';
+import Image from 'next/image';
 
 export default function NewArrivalSection() {
   const products = [
@@ -61,7 +62,14 @@ export default function NewArrivalSection() {
                   <div className="absolute top-2 right-2 text-gray-500 hover:text-red-500 cursor-pointer">
                     <HeartIcon className="w-5 h-5" />
                   </div>
-                  <img src={product.image} alt={product.name} className="w-full h-60 object-scale-down" />
+                  <div className="relative w-full h-60">
+                    <Image
+                      src={product.image}
+                      alt={product.name}
+                      fill
+                      className="object-scale-down"
+                    />
+                  </div>
                 </div>
                 <h3 className="mt-4 font-semibold text-sm">{product.name}</h3>
                 {/* Rating */}

@@ -3,13 +3,23 @@
 import React, { useRef } from 'react';
 import Image from 'next/image';
 
-export default function AccountInfoForm({
-  formData,
-  setFormData,
-}: {
-  formData: any;
-  setFormData: React.Dispatch<React.SetStateAction<any>>;
-}) {
+type AccountFormData = {
+  avatar: string;
+  isLocal?: boolean;
+  displayName: string;
+  username: string;
+  fullName: string;
+  email: string;
+  secondaryEmail: string;
+  phoneNumber: string;
+};
+
+type Props = {
+  formData: AccountFormData;
+  setFormData: React.Dispatch<React.SetStateAction<AccountFormData>>;
+};
+
+export default function AccountInfoForm({ formData, setFormData }: Props) {
   const fileInputRef = useRef<HTMLInputElement | null>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -35,23 +45,13 @@ export default function AccountInfoForm({
       <div className="flex flex-col md:flex-row gap-8 p-4">
         <div className="flex flex-col items-center md:block space-y-2">
           <div className="w-28 h-28 relative rounded-full overflow-hidden">
-            {isLocalImage ? (
-              // Fallback to img for blob preview
-              <img
-                src={formData.avatar}
-                alt="User Avatar"
-                className="w-28 h-28 object-cover rounded-full"
-              />
-            ) : (
-              // Use Next.js <Image> for remote/static images
-              <Image
-                src={formData.avatar || '/default-avatar.png'}
-                alt="User Avatar"
-                width={112}
-                height={112}
-                className="object-cover rounded-full"
-              />
-            )}
+            <Image
+              src={formData.avatar || '/default-avatar.png'}
+              alt="User Avatar"
+              width={112}
+              height={112}
+              className="object-cover rounded-full"
+            />
           </div>
           <button
             onClick={() => fileInputRef.current?.click()}
@@ -72,24 +72,26 @@ export default function AccountInfoForm({
         <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-6 text-sm">
           {[
             { label: 'Display name', name: 'displayName' },
-            { label: 'Username', name: 'username', placeholder: 'Display name' },
+            { label: 'Username', name: 'username' },
             { label: 'Full Name', name: 'fullName' },
             { label: 'Email', name: 'email' },
             { label: 'Secondary Email', name: 'secondaryEmail' },
             { label: 'Phone Number', name: 'phoneNumber' },
-          ].map(({ label, name, placeholder }) => (
+          ].map(({ label, name }) => (
             <div key={name}>
-              <label className="block mb-1 font-medium text-gray-700">{label}</label>
+              <label className="block mb-1 font-medium text-gray-700">
+                {label}
+              </label>
               <input
                 type="text"
                 name={name}
-                placeholder={placeholder}
-                value={formData[name]}
+                value={formData[name as keyof AccountFormData] || ''}
                 onChange={handleChange}
                 className="w-full border border-gray-300 rounded px-3 py-3"
               />
             </div>
           ))}
+
           <div className="col-span-2">
             <button
               type="submit"

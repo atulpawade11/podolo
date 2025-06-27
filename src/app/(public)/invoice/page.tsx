@@ -3,7 +3,6 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState } from 'react';
 
 export default function InvoicePage() {
     return (
@@ -71,7 +70,15 @@ export default function InvoicePage() {
                             <div className="divide-y">
                                 {[1, 2].map((_, i) => (
                                 <div key={i} className="flex items-start py-4 space-x-4">
-                                    <img src="/images/dress-red.png" alt="product" className="w-16 h-20 object-cover rounded" />
+                                    <div className="relative w-16 h-20">
+                                        <Image
+                                            src="/images/dress-red.png"
+                                            alt="product"
+                                            fill
+                                            className="object-cover rounded"
+                                        />
+                                    </div>
+
                                     <div className="flex-1">
                                         <p className="font-medium">Midi dress with 2 straps</p>
                                         <p className="text-sm text-gray-500">$265</p>

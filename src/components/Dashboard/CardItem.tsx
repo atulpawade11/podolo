@@ -2,6 +2,7 @@
 
 import { useState, useRef } from 'react';
 import { EllipsisVertical } from "lucide-react";
+import Image from 'next/image';
 
 interface CardProps {
   bgColor: string;
@@ -47,7 +48,14 @@ export default function CardItem({
         </div>
       </div>
       <div className="mt-8 flex items-center justify-between">
-        <img src={brandLogo} alt={brandName} className="h-6" />
+        <div className="relative h-6 w-auto">
+          <Image
+            src={brandLogo}
+            alt={brandName}
+            fill
+            className="object-contain"
+          />
+        </div>
         <p className="text-sm">{holder}</p>
       </div>
     </div>

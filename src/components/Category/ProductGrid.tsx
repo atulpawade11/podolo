@@ -19,7 +19,7 @@ const allProducts = Array.from({ length: 32 }).map((_, i) => ({
   rating: 4,
 }));
 
-export default function ProductGrid({ viewMode, sort, categorySlug }: ProductGridProps) {
+export default function ProductGrid({ viewMode }: ProductGridProps) {
   const [currentPage, setCurrentPage] = useState(1);
   const productsPerPage = 8;
 

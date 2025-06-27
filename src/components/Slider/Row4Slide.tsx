@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import { Product } from '@/types/product';
 import WishlistButton from '@/components/WishlistButton';
 
@@ -30,11 +31,14 @@ const Row4Slide: React.FC<Row4SlideProps> = ({ product }) => {
       )}
 
       {/* Product Image */}
-      <img
-        src={product.image}
-        alt={product.name}
-        className="mx-auto w-full h-50 bg-gray-200"
-      />
+      <div className="relative mx-auto w-full h-[200px] bg-gray-200">
+        <Image
+          src={product.image}
+          alt={product.name}
+          fill
+          className="object-contain"
+        />
+      </div>
 
       {/* Product Name */}
       <div className="mt-2 text-sm font-medium">{product.name}</div>

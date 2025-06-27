@@ -1,10 +1,26 @@
 import React from 'react';
 
+interface AddressData {
+  firstName: string;
+  lastName: string;
+  company?: string;
+  address: string;
+  city: string;
+  zip: string;
+  email: string;
+  phone: string;
+  country: string;
+  state: string;
+}
+
 interface Props {
   title: string;
   section: 'billing' | 'shipping';
-  data: any;
-  onChange: (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>, section: 'billing' | 'shipping') => void;
+  data: AddressData;
+  onChange: (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>,
+    section: 'billing' | 'shipping'
+  ) => void;
 }
 
 export default function AddressSection({ title, section, data, onChange }: Props) {
@@ -22,28 +38,52 @@ export default function AddressSection({ title, section, data, onChange }: Props
           { label: 'Email', name: 'email' },
           { label: 'Phone Number', name: 'phone' },
         ].map(({ label, name }) => (
-          <div key={name} className={name === 'company' || name === 'address' ? 'col-span-2' : ''}>
+          <div
+            key={name}
+            className={name === 'company' || name === 'address' ? 'col-span-2' : ''}
+          >
             <label>{label}</label>
-            <input name={name} value={data[name]} onChange={e => onChange(e, section)} className="w-full border border-gray-300 px-3 py-3 rounded" />
+            <input
+              name={name}
+              value={(data as any)[name] || ''}
+              onChange={e => onChange(e, section)}
+              className="w-full border border-gray-300 px-3 py-3 rounded"
+            />
           </div>
         ))}
+
         <div className="sm:col-span-1">
           <label>Country</label>
-          <select name="country" value={data.country} onChange={e => onChange(e, section)} className="w-full border border-gray-300 px-3 py-3 rounded">
+          <select
+            name="country"
+            value={data.country}
+            onChange={e => onChange(e, section)}
+            className="w-full border border-gray-300 px-3 py-3 rounded"
+          >
             <option value="India">India</option>
             <option value="USA">USA</option>
           </select>
         </div>
+
         <div className="sm:col-span-1">
           <label>State</label>
-          <select name="state" value={data.state} onChange={e => onChange(e, section)} className="w-full border border-gray-300 px-3 py-3 rounded">
+          <select
+            name="state"
+            value={data.state}
+            onChange={e => onChange(e, section)}
+            className="w-full border border-gray-300 px-3 py-3 rounded"
+          >
             <option value="">Select...</option>
             <option value="MP">Madhya Pradesh</option>
             <option value="MH">Maharashtra</option>
           </select>
         </div>
+
         <div className="col-span-2">
-          <button type="submit" className="w-1/4 bg-yellow-600 hover:bg-yellow-500 text-white font-normal py-3 rounded-sm transition cursor-pointer">
+          <button
+            type="submit"
+            className="w-1/4 bg-yellow-600 hover:bg-yellow-500 text-white font-normal py-3 rounded-sm transition cursor-pointer"
+          >
             SAVE CHANGES
           </button>
         </div>

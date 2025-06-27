@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { ChevronDown, ChevronUp, Plus, Minus } from 'lucide-react';
 
 const SidebarFilters = () => {
-  const [activeCategory, setActiveCategory] = useState('Clothing');
+  const [activeCategory ] = useState('Clothing');
   const [openSections, setOpenSections] = useState<Record<string, boolean>>({
     Clothing: true,
     Watches: false,
