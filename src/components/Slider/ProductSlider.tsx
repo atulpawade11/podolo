@@ -6,7 +6,7 @@ import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 
-import { Product } from '@/types/products';
+import { SimpleProduct } from '@/types/products'; // updated import
 import ProductSlide from './ProductSlide';
 import Grid2x2Slide from './Grid2x2Slide';
 import SingleSlide from './SingleSlide';
@@ -15,7 +15,7 @@ import CenterTabbedSlider from './CenterTabbedSlider';
 
 interface ProductSliderProps {
   title?: string;
-  products: Product[];
+  products: SimpleProduct[]; // updated type
   layout?: 'grid2x2' | 'row4' | 'single' | 'tabbed' | 'center-tabbed';
   tabs?: string[];
   selectedTab?: string;
@@ -65,7 +65,7 @@ const ProductSlider: React.FC<ProductSliderProps> = ({
         {isTabbed && tabs?.length ? (
           <div className="flex items-center justify-between mb-4">
             <div className="flex space-x-6 text-sm font-medium">
-              {tabs!.map((tab) => (
+              {tabs.map((tab) => (
                 <button
                   key={tab}
                   onClick={() => onTabChange?.(tab)}
@@ -120,7 +120,7 @@ const ProductSlider: React.FC<ProductSliderProps> = ({
             prevEl: prevRef.current,
             nextEl: nextRef.current,
           }}
-          onSwiper={(swiper: { params: { navigation: { prevEl: HTMLButtonElement | null; nextEl: HTMLButtonElement | null; }; }; navigation: { destroy: () => void; init: () => void; update: () => void; }; }) => {
+          onSwiper={(swiper) => {
             if (
               swiper.params.navigation &&
               typeof swiper.params.navigation !== 'boolean'
