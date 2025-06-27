@@ -579,11 +579,29 @@ var _s = __turbopack_context__.k.signature();
 ;
 function Settings() {
     _s();
-    const [formData, setFormData] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])({});
-    const [billing, setBilling] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])({});
-    const [shipping, setShipping] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])({
-        ...billing
+    const [formData, setFormData] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])({
+        avatar: '',
+        displayName: '',
+        username: '',
+        fullName: '',
+        email: '',
+        phone: '',
+        bio: ''
     });
+    const initialAddress = {
+        firstName: '',
+        lastName: '',
+        company: '',
+        address: '',
+        city: '',
+        zip: '',
+        email: '',
+        phone: '',
+        country: 'India',
+        state: ''
+    };
+    const [billing, setBilling] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(initialAddress);
+    const [shipping, setShipping] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(initialAddress);
     const handleAddressChange = (e, section)=>{
         const { name, value } = e.target;
         const updater = section === 'billing' ? setBilling : setShipping;
@@ -607,7 +625,7 @@ function Settings() {
                 setFormData: setFormData
             }, void 0, false, {
                 fileName: "[project]/src/app/(public)/dashboard/settings/page.tsx",
-                lineNumber: 28,
+                lineNumber: 53,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -620,7 +638,7 @@ function Settings() {
                         onChange: handleAddressChange
                     }, void 0, false, {
                         fileName: "[project]/src/app/(public)/dashboard/settings/page.tsx",
-                        lineNumber: 30,
+                        lineNumber: 55,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$settings$2f$AddressSection$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -630,28 +648,28 @@ function Settings() {
                         onChange: handleAddressChange
                     }, void 0, false, {
                         fileName: "[project]/src/app/(public)/dashboard/settings/page.tsx",
-                        lineNumber: 31,
+                        lineNumber: 56,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/(public)/dashboard/settings/page.tsx",
-                lineNumber: 29,
+                lineNumber: 54,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$settings$2f$ChangePasswordForm$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/src/app/(public)/dashboard/settings/page.tsx",
-                lineNumber: 33,
+                lineNumber: 58,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/(public)/dashboard/settings/page.tsx",
-        lineNumber: 27,
+        lineNumber: 52,
         columnNumber: 5
     }, this);
 }
-_s(Settings, "vvMU6ZIkCSHryUEA4MyYo4Kn74Y=");
+_s(Settings, "7iU1Hs2+dIYW4uxamhgReI5BE28=");
 _c = Settings;
 var _c;
 __turbopack_context__.k.register(_c, "Settings");

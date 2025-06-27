@@ -6,11 +6,36 @@ import AddressSection from '@/components/settings/AddressSection';
 import ChangePasswordForm from '@/components/settings/ChangePasswordForm';
 
 export default function Settings() {
-  const [formData, setFormData] = useState({ /*...*/ });
-  const [billing, setBilling] = useState({ /*...*/ });
-  const [shipping, setShipping] = useState({ ...billing });
+  const [formData, setFormData] = useState({
+    avatar: '',
+    displayName: '',
+    username: '',
+    fullName: '',
+    email: '',
+    phone: '',
+    bio: '',
+  });
 
-  const handleAddressChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>, section: 'billing' | 'shipping') => {
+  const initialAddress = {
+    firstName: '',
+    lastName: '',
+    company: '',
+    address: '',
+    city: '',
+    zip: '',
+    email: '',
+    phone: '',
+    country: 'India',
+    state: '',
+  };
+
+  const [billing, setBilling] = useState(initialAddress);
+  const [shipping, setShipping] = useState(initialAddress);
+
+  const handleAddressChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>,
+    section: 'billing' | 'shipping'
+  ) => {
     const { name, value } = e.target;
     const updater = section === 'billing' ? setBilling : setShipping;
     updater(prev => ({ ...prev, [name]: value }));

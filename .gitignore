@@ -1,4 +1,42 @@
-node_modules
+# Node modules
+node_modules/
 
 # Next.js build output
-.next
+.next/
+out/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Dependency directories
+.pnp/
+.pnp.js
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# VSCode settings
+.vscode/
+
+# Build artifacts
+dist/
+build/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Coverage directory
+coverage/
+
+# IDEs and editors
+.idea/
+*.sw?
