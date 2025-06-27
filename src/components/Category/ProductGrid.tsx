@@ -38,7 +38,6 @@ export default function ProductGrid({ viewMode }: ProductGridProps) {
           <ProductCard
             key={product.id}
             viewMode={viewMode}
-            product={product}
             image={product.image}
             name={product.name}
             price={product.price}
