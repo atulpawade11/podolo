@@ -5,8 +5,29 @@ import AccountInfoForm from '@/components/settings/AccountInfoForm';
 import AddressSection from '@/components/settings/AddressSection';
 import ChangePasswordForm from '@/components/settings/ChangePasswordForm';
 
+type AccountFormData = {
+  avatar: string;
+  displayName: string;
+  username: string;
+  fullName: string;
+  email: string;
+  phone: string;
+  bio: string;
+  secondaryEmail: string;
+  phoneNumber: string;
+};
+
+type AddressData = {
+  name: string;
+  address: string;
+  city: string;
+  state: string;
+  zip: string;
+  country: string;
+};
+
 export default function Settings() {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<AccountFormData>({
     avatar: '',
     displayName: '',
     username: '',
@@ -14,23 +35,20 @@ export default function Settings() {
     email: '',
     phone: '',
     bio: '',
+    secondaryEmail: '',
+    phoneNumber: '',
   });
 
-  const initialAddress = {
-    firstName: '',
-    lastName: '',
-    company: '',
+  const [billing, setBilling] = useState<AddressData>({
+    name: '',
     address: '',
     city: '',
-    zip: '',
-    email: '',
-    phone: '',
-    country: 'India',
     state: '',
-  };
+    zip: '',
+    country: '',
+  });
 
-  const [billing, setBilling] = useState(initialAddress);
-  const [shipping, setShipping] = useState(initialAddress);
+  const [shipping, setShipping] = useState<AddressData>({ ...billing });
 
   const handleAddressChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>,
