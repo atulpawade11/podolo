@@ -1,11 +1,4 @@
-export interface Product {
-  id: number;
-  name: string;
-  price: number;
-  image: string;
-  category: string;
-  discountPercent?: number;
-}
+
 
 export interface ProductImage {
   id: number;
@@ -36,6 +29,26 @@ export interface AddToCart {
   description: string;
 }
 
-
+export interface Product {
+  id: number;
+  name: string;
+  slug: string;
+  variation: string;
+  permalink: string;
+  sku: string;
+  summary: string;
+  short_description: string;
+  description: string;
+  on_sale: boolean;
+  prices: ProductPrices;
+  average_rating: string;
+  review_count: number;
+  images: ProductImage[];
+  has_options: boolean;
+  is_purchasable: boolean;
+  is_in_stock: boolean;
+  low_stock_remaining: number | null;
+  add_to_cart: AddToCart;
+}
 
 export type ProductList = Product[];
