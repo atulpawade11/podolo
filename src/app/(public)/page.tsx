@@ -6,7 +6,7 @@ import HeroSlider from "@/components/HeroSlider";
 import ImageSlider from "@/components/Slider/ImageSlider";
 import NewArrival from '@/components/NewArrival';
 import Image from 'next/image';
-import { SimpleProduct } from '@/types/product';
+import { SimpleProduct } from '@/types/products';
 
 export default function Home() {
   const [firstTab, setFirstTab] = useState("Latest's Products");
