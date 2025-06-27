@@ -1,4 +1,10 @@
-
+export interface SimpleProduct {
+  id: number;
+  name: string;
+  price: number;
+  image: string;
+  category: string;
+}
 
 export interface ProductImage {
   id: number;
