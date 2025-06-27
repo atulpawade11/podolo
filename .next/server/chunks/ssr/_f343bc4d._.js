@@ -35,7 +35,6 @@ function AccountInfoForm({ formData, setFormData }) {
                 }));
         }
     };
-    const isLocalImage = formData.isLocal;
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "w-full mx-auto bg-white border border-gray-200 rounded-sm shadow-sm",
         children: [
@@ -44,7 +43,7 @@ function AccountInfoForm({ formData, setFormData }) {
                 children: "ACCOUNT SETTING"
             }, void 0, false, {
                 fileName: "[project]/src/components/settings/AccountInfoForm.tsx",
-                lineNumber: 42,
+                lineNumber: 40,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -63,12 +62,12 @@ function AccountInfoForm({ formData, setFormData }) {
                                     className: "object-cover rounded-full"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/settings/AccountInfoForm.tsx",
-                                    lineNumber: 48,
+                                    lineNumber: 46,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/components/settings/AccountInfoForm.tsx",
-                                lineNumber: 47,
+                                lineNumber: 45,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -78,7 +77,7 @@ function AccountInfoForm({ formData, setFormData }) {
                                 children: "Change Avatar"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/settings/AccountInfoForm.tsx",
-                                lineNumber: 56,
+                                lineNumber: 54,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -89,13 +88,13 @@ function AccountInfoForm({ formData, setFormData }) {
                                 onChange: handleImageChange
                             }, void 0, false, {
                                 fileName: "[project]/src/components/settings/AccountInfoForm.tsx",
-                                lineNumber: 63,
+                                lineNumber: 61,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/settings/AccountInfoForm.tsx",
-                        lineNumber: 46,
+                        lineNumber: 44,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -133,7 +132,7 @@ function AccountInfoForm({ formData, setFormData }) {
                                             children: label
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/settings/AccountInfoForm.tsx",
-                                            lineNumber: 82,
+                                            lineNumber: 80,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -144,13 +143,13 @@ function AccountInfoForm({ formData, setFormData }) {
                                             className: "w-full border border-gray-300 rounded px-3 py-3"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/settings/AccountInfoForm.tsx",
-                                            lineNumber: 85,
+                                            lineNumber: 83,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, name, true, {
                                     fileName: "[project]/src/components/settings/AccountInfoForm.tsx",
-                                    lineNumber: 81,
+                                    lineNumber: 79,
                                     columnNumber: 13
                                 }, this)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -161,30 +160,30 @@ function AccountInfoForm({ formData, setFormData }) {
                                     children: "SAVE CHANGES"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/settings/AccountInfoForm.tsx",
-                                    lineNumber: 96,
+                                    lineNumber: 94,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/components/settings/AccountInfoForm.tsx",
-                                lineNumber: 95,
+                                lineNumber: 93,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/settings/AccountInfoForm.tsx",
-                        lineNumber: 72,
+                        lineNumber: 70,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/settings/AccountInfoForm.tsx",
-                lineNumber: 45,
+                lineNumber: 43,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/settings/AccountInfoForm.tsx",
-        lineNumber: 41,
+        lineNumber: 39,
         columnNumber: 5
     }, this);
 }
@@ -198,8 +197,43 @@ __turbopack_context__.s({
     "default": (()=>AddressSection)
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
+'use client';
 ;
 function AddressSection({ title, section, data, onChange }) {
+    const fields = [
+        {
+            label: 'First Name',
+            name: 'firstName'
+        },
+        {
+            label: 'Last Name',
+            name: 'lastName'
+        },
+        {
+            label: 'Company Name (Optional)',
+            name: 'company'
+        },
+        {
+            label: 'Address',
+            name: 'address'
+        },
+        {
+            label: 'City',
+            name: 'city'
+        },
+        {
+            label: 'Zip Code',
+            name: 'zip'
+        },
+        {
+            label: 'Email',
+            name: 'email'
+        },
+        {
+            label: 'Phone Number',
+            name: 'phone'
+        }
+    ];
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "bg-white border border-gray-200 rounded-sm shadow-sm w-full",
         children: [
@@ -208,69 +242,36 @@ function AddressSection({ title, section, data, onChange }) {
                 children: title
             }, void 0, false, {
                 fileName: "[project]/src/components/settings/AddressSection.tsx",
-                lineNumber: 29,
+                lineNumber: 42,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm p-4",
                 children: [
-                    [
-                        {
-                            label: 'First Name',
-                            name: 'firstName'
-                        },
-                        {
-                            label: 'Last Name',
-                            name: 'lastName'
-                        },
-                        {
-                            label: 'Company Name (Optional)',
-                            name: 'company'
-                        },
-                        {
-                            label: 'Address',
-                            name: 'address'
-                        },
-                        {
-                            label: 'City',
-                            name: 'city'
-                        },
-                        {
-                            label: 'Zip Code',
-                            name: 'zip'
-                        },
-                        {
-                            label: 'Email',
-                            name: 'email'
-                        },
-                        {
-                            label: 'Phone Number',
-                            name: 'phone'
-                        }
-                    ].map(({ label, name })=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    fields.map(({ label, name })=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: name === 'company' || name === 'address' ? 'col-span-2' : '',
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
                                     children: label
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/settings/AddressSection.tsx",
-                                    lineNumber: 45,
+                                    lineNumber: 49,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
                                     name: name,
-                                    value: data[name] || '',
+                                    value: data[name] ?? '',
                                     onChange: (e)=>onChange(e, section),
                                     className: "w-full border border-gray-300 px-3 py-3 rounded"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/settings/AddressSection.tsx",
-                                    lineNumber: 46,
+                                    lineNumber: 50,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, name, true, {
                             fileName: "[project]/src/components/settings/AddressSection.tsx",
-                            lineNumber: 41,
+                            lineNumber: 45,
                             columnNumber: 11
                         }, this)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -280,7 +281,7 @@ function AddressSection({ title, section, data, onChange }) {
                                 children: "Country"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/settings/AddressSection.tsx",
-                                lineNumber: 56,
+                                lineNumber: 60,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
@@ -294,7 +295,7 @@ function AddressSection({ title, section, data, onChange }) {
                                         children: "India"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/settings/AddressSection.tsx",
-                                        lineNumber: 63,
+                                        lineNumber: 67,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -302,19 +303,19 @@ function AddressSection({ title, section, data, onChange }) {
                                         children: "USA"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/settings/AddressSection.tsx",
-                                        lineNumber: 64,
+                                        lineNumber: 68,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/settings/AddressSection.tsx",
-                                lineNumber: 57,
+                                lineNumber: 61,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/settings/AddressSection.tsx",
-                        lineNumber: 55,
+                        lineNumber: 59,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -324,7 +325,7 @@ function AddressSection({ title, section, data, onChange }) {
                                 children: "State"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/settings/AddressSection.tsx",
-                                lineNumber: 69,
+                                lineNumber: 73,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
@@ -338,7 +339,7 @@ function AddressSection({ title, section, data, onChange }) {
                                         children: "Select..."
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/settings/AddressSection.tsx",
-                                        lineNumber: 76,
+                                        lineNumber: 80,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -346,7 +347,7 @@ function AddressSection({ title, section, data, onChange }) {
                                         children: "Madhya Pradesh"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/settings/AddressSection.tsx",
-                                        lineNumber: 77,
+                                        lineNumber: 81,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -354,19 +355,19 @@ function AddressSection({ title, section, data, onChange }) {
                                         children: "Maharashtra"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/settings/AddressSection.tsx",
-                                        lineNumber: 78,
+                                        lineNumber: 82,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/settings/AddressSection.tsx",
-                                lineNumber: 70,
+                                lineNumber: 74,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/settings/AddressSection.tsx",
-                        lineNumber: 68,
+                        lineNumber: 72,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -377,24 +378,24 @@ function AddressSection({ title, section, data, onChange }) {
                             children: "SAVE CHANGES"
                         }, void 0, false, {
                             fileName: "[project]/src/components/settings/AddressSection.tsx",
-                            lineNumber: 83,
+                            lineNumber: 87,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/components/settings/AddressSection.tsx",
-                        lineNumber: 82,
+                        lineNumber: 86,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/settings/AddressSection.tsx",
-                lineNumber: 30,
+                lineNumber: 43,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/settings/AddressSection.tsx",
-        lineNumber: 28,
+        lineNumber: 41,
         columnNumber: 5
     }, this);
 }

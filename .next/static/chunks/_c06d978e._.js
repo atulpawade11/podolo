@@ -160,6 +160,32 @@ const CartProvider = ({ children })=>{
     _s();
     const [cart, setCart] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])([]);
     const { user } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$Contexts$2f$AuthContext$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useAuth"])();
+    const syncCartWithServer = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useCallback"])({
+        "CartProvider.useCallback[syncCartWithServer]": async ()=>{
+            const token = localStorage.getItem('authToken');
+            if (!token) return;
+            try {
+                const response = await fetch('/api/cart/sync', {
+                    method: 'POST',
+                    body: JSON.stringify({
+                        cart
+                    }),
+                    headers: {
+                        'Content-Type': 'application/json',
+                        Authorization: `Bearer ${token}`
+                    }
+                });
+                if (response.ok) {
+                    const serverCart = await response.json();
+                    setCart(serverCart);
+                }
+            } catch (error) {
+                console.error('Cart sync error:', error);
+            }
+        }
+    }["CartProvider.useCallback[syncCartWithServer]"], [
+        cart
+    ]);
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "CartProvider.useEffect": ()=>{
             const savedCart = localStorage.getItem('cart');
@@ -177,30 +203,9 @@ const CartProvider = ({ children })=>{
         }
     }["CartProvider.useEffect"], [
         cart,
-        user
+        user,
+        syncCartWithServer
     ]);
-    const syncCartWithServer = async ()=>{
-        const token = localStorage.getItem('authToken');
-        if (!token) return;
-        try {
-            const response = await fetch('/api/cart/sync', {
-                method: 'POST',
-                body: JSON.stringify({
-                    cart
-                }),
-                headers: {
-                    'Content-Type': 'application/json',
-                    Authorization: `Bearer ${token}`
-                }
-            });
-            if (response.ok) {
-                const serverCart = await response.json();
-                setCart(serverCart);
-            }
-        } catch (error) {
-            console.error('Cart sync error:', error);
-        }
-    };
     const addToCart = (item)=>{
         setCart((prev)=>{
             const existingItem = prev.find((i)=>i.id === item.id);
@@ -244,11 +249,11 @@ const CartProvider = ({ children })=>{
         children: children
     }, void 0, false, {
         fileName: "[project]/src/lib/Contexts/CartContext.tsx",
-        lineNumber: 78,
+        lineNumber: 79,
         columnNumber: 5
     }, this);
 };
-_s(CartProvider, "jDkAf1CidG6gqkBRMtkI8jOfnfo=", false, function() {
+_s(CartProvider, "1n6Pbfe7PMli3YHXSjXmOpIP16Y=", false, function() {
     return [
         __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$Contexts$2f$AuthContext$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useAuth"]
     ];

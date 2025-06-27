@@ -1473,9 +1473,9 @@ function EyewearSlider() {
                                     }
                                 },
                                 onInit: (swiper)=>{
-                                    // @ts-expect-error
+                                    // @ts-expect-error: refs may be null at runtime but are safe after mounting
                                     swiper.params.navigation.prevEl = prevRef.current;
-                                    // @ts-expect-error
+                                    // @ts-expect-error: refs may be null at runtime but are safe after mounting
                                     swiper.params.navigation.nextEl = nextRef.current;
                                     swiper.navigation.init();
                                     swiper.navigation.update();

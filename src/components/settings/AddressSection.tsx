@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 
 interface AddressData {
@@ -24,20 +26,22 @@ interface Props {
 }
 
 export default function AddressSection({ title, section, data, onChange }: Props) {
+  const fields: { label: string; name: keyof AddressData }[] = [
+    { label: 'First Name', name: 'firstName' },
+    { label: 'Last Name', name: 'lastName' },
+    { label: 'Company Name (Optional)', name: 'company' },
+    { label: 'Address', name: 'address' },
+    { label: 'City', name: 'city' },
+    { label: 'Zip Code', name: 'zip' },
+    { label: 'Email', name: 'email' },
+    { label: 'Phone Number', name: 'phone' },
+  ];
+
   return (
     <div className="bg-white border border-gray-200 rounded-sm shadow-sm w-full">
       <h2 className="font-medium text-sm text-gray-700 mb-6 border-b border-gray-300 p-4">{title}</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm p-4">
-        {[
-          { label: 'First Name', name: 'firstName' },
-          { label: 'Last Name', name: 'lastName' },
-          { label: 'Company Name (Optional)', name: 'company' },
-          { label: 'Address', name: 'address' },
-          { label: 'City', name: 'city' },
-          { label: 'Zip Code', name: 'zip' },
-          { label: 'Email', name: 'email' },
-          { label: 'Phone Number', name: 'phone' },
-        ].map(({ label, name }) => (
+        {fields.map(({ label, name }) => (
           <div
             key={name}
             className={name === 'company' || name === 'address' ? 'col-span-2' : ''}
@@ -45,7 +49,7 @@ export default function AddressSection({ title, section, data, onChange }: Props
             <label>{label}</label>
             <input
               name={name}
-              value={(data as any)[name] || ''}
+              value={data[name] ?? ''}
               onChange={e => onChange(e, section)}
               className="w-full border border-gray-300 px-3 py-3 rounded"
             />

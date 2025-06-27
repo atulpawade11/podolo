@@ -35,8 +35,6 @@ export default function AccountInfoForm({ formData, setFormData }: Props) {
     }
   };
 
-  const isLocalImage = formData.isLocal;
-
   return (
     <div className="w-full mx-auto bg-white border border-gray-200 rounded-sm shadow-sm">
       <h2 className="font-medium text-sm text-gray-700 mb-6 border-b border-gray-300 p-4">

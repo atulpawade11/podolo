@@ -1,6 +1,6 @@
 'use client';
 
-import React, { createContext, useContext, useState, useEffect } from 'react';
+import React, { createContext, useContext, useState, useEffect, useCallback } from 'react';
 import { CartContextType, CartItem } from './types';
 import { useAuth } from './AuthContext';
 
@@ -9,6 +9,29 @@ const CartContext = createContext<CartContextType | undefined>(undefined);
 export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [cart, setCart] = useState<CartItem[]>([]);
   const { user } = useAuth();
+
+  const syncCartWithServer = useCallback(async () => {
+    const token = localStorage.getItem('authToken');
+    if (!token) return;
+
+    try {
+      const response = await fetch('/api/cart/sync', {
+        method: 'POST',
+        body: JSON.stringify({ cart }),
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${token}`,
+        },
+      });
+
+      if (response.ok) {
+        const serverCart = await response.json();
+        setCart(serverCart);
+      }
+    } catch (error) {
+      console.error('Cart sync error:', error);
+    }
+  }, [cart]);
 
   useEffect(() => {
     const savedCart = localStorage.getItem('cart');
@@ -22,29 +45,7 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
       syncCartWithServer().catch(console.error);
     }
     localStorage.setItem('cart', JSON.stringify(cart));
-  }, [cart, user]);
-
-  const syncCartWithServer = async () => {
-    const token = localStorage.getItem('authToken'); 
-    if (!token) return;
-
-    try {
-      const response = await fetch('/api/cart/sync', {
-        method: 'POST',
-        body: JSON.stringify({ cart }),
-        headers: {
-          'Content-Type': 'application/json',
-          Authorization: `Bearer ${token}`,
-        },
-      });
-      if (response.ok) {
-        const serverCart = await response.json();
-        setCart(serverCart);
-      }
-    } catch (error) {
-      console.error('Cart sync error:', error);
-    }
-  };
+  }, [cart, user, syncCartWithServer]);
 
   const addToCart = (item: Omit<CartItem, 'quantity'>) => {
     setCart((prev) => {
