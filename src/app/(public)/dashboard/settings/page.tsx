@@ -4,27 +4,7 @@ import { useState } from 'react';
 import AccountInfoForm from '@/components/settings/AccountInfoForm';
 import AddressSection from '@/components/settings/AddressSection';
 import ChangePasswordForm from '@/components/settings/ChangePasswordForm';
-
-type AccountFormData = {
-  avatar: string;
-  displayName: string;
-  username: string;
-  fullName: string;
-  email: string;
-  phone: string;
-  bio: string;
-  secondaryEmail: string;
-  phoneNumber: string;
-};
-
-type AddressData = {
-  name: string;
-  address: string;
-  city: string;
-  state: string;
-  zip: string;
-  country: string;
-};
+import { AccountFormData, AddressData } from '@/types/settings';
 
 export default function Settings() {
   const [formData, setFormData] = useState<AccountFormData>({

@@ -1,21 +1,9 @@
 'use client';
 
 import React from 'react';
+import { AddressData } from '@/types/settings';
 
-interface AddressData {
-  firstName: string;
-  lastName: string;
-  company?: string;
-  address: string;
-  city: string;
-  zip: string;
-  email: string;
-  phone: string;
-  country: string;
-  state: string;
-}
-
-interface Props {
+type Props = {
   title: string;
   section: 'billing' | 'shipping';
   data: AddressData;
@@ -23,7 +11,7 @@ interface Props {
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>,
     section: 'billing' | 'shipping'
   ) => void;
-}
+};
 
 export default function AddressSection({ title, section, data, onChange }: Props) {
   const fields: { label: string; name: keyof AddressData }[] = [
@@ -39,47 +27,52 @@ export default function AddressSection({ title, section, data, onChange }: Props
 
   return (
     <div className="bg-white border border-gray-200 rounded-sm shadow-sm w-full">
-      <h2 className="font-medium text-sm text-gray-700 mb-6 border-b border-gray-300 p-4">{title}</h2>
+      <h2 className="font-medium text-sm text-gray-700 mb-6 border-b border-gray-300 p-4">
+        {title}
+      </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm p-4">
         {fields.map(({ label, name }) => (
           <div
             key={name}
             className={name === 'company' || name === 'address' ? 'col-span-2' : ''}
           >
-            <label>{label}</label>
+            <label className="block mb-1 font-medium text-gray-700">{label}</label>
             <input
               name={name}
               value={data[name] ?? ''}
-              onChange={e => onChange(e, section)}
+              onChange={(e) => onChange(e, section)}
               className="w-full border border-gray-300 px-3 py-3 rounded"
             />
           </div>
         ))}
 
         <div className="sm:col-span-1">
-          <label>Country</label>
+          <label className="block mb-1 font-medium text-gray-700">Country</label>
           <select
             name="country"
             value={data.country}
-            onChange={e => onChange(e, section)}
+            onChange={(e) => onChange(e, section)}
             className="w-full border border-gray-300 px-3 py-3 rounded"
           >
+            <option value="">Select Country...</option>
             <option value="India">India</option>
             <option value="USA">USA</option>
+            {/* Add more countries if needed */}
           </select>
         </div>
 
         <div className="sm:col-span-1">
-          <label>State</label>
+          <label className="block mb-1 font-medium text-gray-700">State</label>
           <select
             name="state"
             value={data.state}
-            onChange={e => onChange(e, section)}
+            onChange={(e) => onChange(e, section)}
             className="w-full border border-gray-300 px-3 py-3 rounded"
           >
-            <option value="">Select...</option>
+            <option value="">Select State...</option>
             <option value="MP">Madhya Pradesh</option>
             <option value="MH">Maharashtra</option>
+            {/* Add more states as required */}
           </select>
         </div>
 
